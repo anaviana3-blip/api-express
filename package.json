@@ -1,0 +1,25 @@
+{
+  "name": "api-express",
+  "version": "1.0.0",
+  "description": "Atividade de PTAS 3",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --watch app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anaviana3-blip/api-express.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/anaviana3-blip/api-express/issues"
+  },
+  "homepage": "https://github.com/anaviana3-blip/api-express#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
