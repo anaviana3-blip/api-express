@@ -9,9 +9,9 @@ const usuarios = [
 ]; 
 
 const produtos = [
-    {id: 1, nome: 'Notebook'},
-    {id: 2, nome: 'Celular'},
-    {id: 3, nome: 'Camiseta'}
+    {id: 1, nome: 'Notebook', categoria: 'eletronicos'},
+    {id: 2, nome: 'Celular', categoria: 'eletronicos'},
+    {id: 3, nome: 'Camiseta', categoria: 'roupas'}
 ];
  
 app.get('/usuarios', (req, res) => { 
@@ -37,6 +37,17 @@ app.get('/produtos/:id', (req, res) => {
     }
 
     res.json(produto);
+});
+
+app.get('/produtos', (req, res) => {
+    const { categoria } = req.query;
+
+    if (categoria) {
+        const produtosFiltrados = produtos.filter(p => p.categoria === categoria);
+        return res.json(produtosFiltrados);
+    }
+
+    res.json(produtos);
 });
  
 app.listen(PORT, () => { 
